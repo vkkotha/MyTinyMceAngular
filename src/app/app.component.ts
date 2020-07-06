@@ -261,12 +261,15 @@ export class AppComponent implements OnChanges, DoCheck, AfterContentInit,
     }
   }
 
-  showTiny(el, config) {
+  clearEditor() {
     this.editorContainer.clear();
     if (this.editorComponentRef) {
       this.editorComponentRef.destroy();
     }
+  }
 
+  showTiny(el, config) {
+    this.clearEditor();
     const factory: ComponentFactory<any> = this.resolver.resolveComponentFactory(EditorComponent);
     this.editorComponentRef = this.editorContainer.createComponent(factory);
     const editorConfig = {...config};
@@ -291,6 +294,7 @@ export class AppComponent implements OnChanges, DoCheck, AfterContentInit,
       if (fallbackFonts.external_fonts.indexOf(this.selectedFont) === -1) {
         fallbackFonts.external_fonts += fn;
       }
+      this.clearEditor();
     }
   }
 
