@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
+import { EditorModule, TINYMCE_SCRIPT_SRC} from '@tinymce/tinymce-angular';
 import { AppComponent } from './app.component';
 
 @NgModule({

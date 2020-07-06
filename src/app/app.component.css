@@ -1,0 +1,68 @@
+.page-controls {
+  background-color: rgb(244, 245, 246);
+  padding: 1rem 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.preview-container {
+  background-color: rgb(244, 245, 246);
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: min-content;
+  border: 1px solid aliceblue;
+  height: calc(100vh);
+}
+
+#module-scroll {
+  overflow-y: auto;
+  /* width: 100%; */
+  z-index: 110;
+  /* max-width: 90vh; */
+  /* min-height: 80%; */
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  /* margin-bottom: 40px;
+  margin-right: 16px; */
+  height: calc(80vh);
+  background-color: #fff;
+}
+
+:host ::ng-deep #module-scroll .module-container {
+  width: 640px;
+  margin: auto;
+}
+
+:host ::ng-deep #module-scroll .module-container table td {
+  border-collapse: collapse;
+}
+
+:host ::ng-deep #module-scroll .module-container:hover {
+  box-shadow: 0 0 0 3px #000;
+  backface-visibility: hidden;
+  z-index: 105;
+}
+
+.tinymce-toolbar-container {
+  z-index: 2;
+  background-color: rgb(244, 245, 246);
+  height: 50px;
+}
+#tinymce-toolbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.tiny-editor-container {
+  position: relative;
+}
+
+:host ::ng-deep [contenteditable]:focus {
+  outline: none;
+}
+
+
